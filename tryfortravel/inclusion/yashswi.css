@@ -1,0 +1,96 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #2dfff8;
+}
+.panel {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #abffe3;
+}
+
+.inclusions {
+    background-color: #e0f7e9;
+}
+
+.exclusions {
+    background-color: #f7e0e0;
+}
+
+.panel h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.panel h2 .icon {
+    margin-right: 10px;
+}
+
+.panel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.panel ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.panel ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #0077cc;
+}
+
+
+.section {
+    background-color: #ffffff;
+    border: 1px solid #d0d0d0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: #0077cc;
+    border-bottom: 2px solid #0077cc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.subsection {
+    margin-bottom: 20px;
+}
+
+.subsection h3 {
+    color: #0077cc;
+    margin-bottom: 10px;
+}
+
+.subsection ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.subsection ul li {
+    margin-bottom: 10px;
+}
+
+button a{
+    text-decoration: none;
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourly - Discover Your Next Adventure</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./travel.css">
+    <style>
+        .custom-navbar {
+            background-color: rgba(248, 219, 172, 0.918);/* Replace with your desired color */
+        }
+        .destination-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .destination-card {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 5px;
+            text-align: left;
+        }
+        .search-container {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .search-input {
+            margin-right: 10px;
+        }
+        .card{
+            /*padding: 0;
+            background-color: rgb(138, 219, 253);
+            overflow: hidden;
+            height: 310px;
+            /*box-shadow: 2px 2px 10px black;*/
+            margin-bottom: 10px;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+            }
+            
+            /* .destination-image:hover{
+                box-shadow: 2px 2px 10px black; ;
+            }
+            .destinationCard{
+                margin-bottom: 40px;
+            }*/
+            .card .destination-image{
+                width: 100%;
+                object-fit: cover;
+                height: 200px;
+            } 
+            
+            .image-container{
+                position: relative;
+            }
+            
+            
+            .card-img-top{
+                width:100%;
+                height:auto;
+            }
+            .destination-image:hover{
+                box-shadow: 2px 2px 10px black;
+            }
+            .overlay {
+                position: absolute; /* Position overlay on top of the image */
+                top: 0; /* Align to the top */
+                left: 0; /* Align to the left */
+                right: 0; /* Align to the right */
+                bottom: 0; /* Align to the bottom */
+                background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+                color: white; /* Text color */
+                display: flex; /* Flexbox to center text */
+                justify-content: center; /* Center horizontally */
+                align-items:flex-end; /* Center vertically */
+                opacity: 0; /* Hide by default */
+                transition: opacity 0.3s ease; /* Smooth transition */
+            }
+            .image-container:hover .overlay{
+                opacity: 1;
+            }
+            .card-text{
+                margin: 0;
+                font-size: 20px;
+            }
+            
+            /* .btni{
+               position:absolute;
+               top:10px;
+               left:50%;
+               transform: translateX(-50%);
+               z-index: 10;
+                    padding: 0.55rem 0.5rem;
+                    border: none;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    white-space: nowrap;
+                    color: var(--white);
+                    background-color: red;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                  
+            }
+            .btni :hover{
+                opacity: 1;
+            } */
+            .btn-link {
+                position: absolute;
+                top: 10px;
+                left: 88%;
+                transform: translateX(-50%);
+                z-index: 10;
+                padding: 0.55rem 0.5rem;
+                border: none;
+                font-size: 0.8rem;
+                font-weight: 550;
+                white-space: nowrap;
+                color: var(--white);
+                background-color: red;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+                opacity: 0; /* Initially hide the button */
+                visibility: hidden; /* Make sure it's not focusable */
+            }
+            
+            .card:hover .btn-link{
+                opacity: 1; /* Show the button */
+                visibility: visible; /* Make it visible */
+                transition: 0.3s ease-in-out;
+                text-decoration: none;
+                color: bisque;
+            }
+            .navbar {
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                
+            }
+            
+            .nav-link {
+                color: #007bff; /* Change link color */
+            }
+            
+            .nav-link:hover {
+                color: #0056b3; /* Change color on hover */
+            }
+            
+            .header {
+                background-color: #007bff;
+                color: white;
+                padding: 10px;
+                text-align: left;
+            }
+            
+    </style>
+</head>
+<body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light  sticky-top custom-navbar">
+            <a class="navbar-brand" href="#">Tourly</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../tryfortravel/register.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+    <div class="container-fluid">
+        <div class="header">
+            <h2>Tourly - Discover Your Next Adventure</h2>
+        </div>
+        <h3 class="text-center">Popular Destinations of the Day</h3>
+        <div class="row justify-content-between mb-3"></div>
+            <div class="col-sm-12 col-md-8">
+                <!-- Placeholder for any extra information or title -->
+            </div>
+        
+        <div class="col-sm-12 col-md-4 search-container">
+            <input id="searchBox" class="search-input" type="text" placeholder="Search Destination" />
+            <button onclick="searchDestinations()" class="btn btn-primary">Go</button>
+            <button onclick="clearSearch()" class="btn btn-danger">Clear</button>
+        </div>
+
+        <div id="destinationContainer" class="row">
+            <!-- Destinations will be rendered here -->
+        </div>
+    </div>
+
+    <script>
+        const destinations = [
+    { id:1, name: 'shimla', link:'./explores/shimla.html', description: 'The city of love with Eiffel Tower.' },
+    { id:2 ,name: 'udaipur', image: 'https://via.placeholder.com/150?text=Rome', description: 'Explore ancient history and culture.' },
+    { id: 3,name: 'Kashmir', image: 'https://via.placeholder.com/150?text=New+York', description: 'The city that never sleeps.' },
+    { id: 4,name: 'manali', image: 'https://via.placeholder.com/150?text=Tokyo', description: 'Experience modern culture and technology.' },
+    { id: 5, name: 'Rishikesh', image: 'https://via.placeholder.com/150?text=Sydney', description: 'Visit the iconic Sydney Opera House.' },
+    { id: 6,name: 'Srinagar', image: 'https://via.placeholder.com/150?text=Tokyo', description: 'Experience modern culture and technology.' },
+    { id: 7, name: 'jaipur', image: 'https://via.placeholder.com/150?text=Sydney', description: 'Visit the iconic Sydney Opera House.' },
+    {id:8 , name: 'goa',image:'',description:''},
+    {id:9 , name: 'darjelling',image:'',description:''},
+    {id:10 , name: 'kedarnath',image:'',description:''},
+    {id:11, name: 'Shilong',image:'',description:''},
+];
+
+function renderDestinations(destinationList) {
+    const destinationContainer = document.getElementById('destinationContainer');
+    destinationContainer.innerHTML = ''; // Clear existing destinations
+    destinationList.forEach(destination => {
+        const destinationCard = document.createElement('div');
+        destinationCard.classList.add('col-lg-3','col-md-4', 'col-sm-6','destination-card');
+        destinationCard.innerHTML = `
+            <div class="card ">
+             <a href="${destination.link}" class="btn-link">Explore</a>
+            <div class="image-container">
+                <img src="destinationima/${destination.name}.jfif" class="card-img-top destination-image" alt="${destination.name}">
+                <div class="overlay">
+                    <p class="card-text">${destination.description}</p>
+                    
+                </div>
+            </div>
+            </div>
+        <h5 class="card-title text-capitalize ">${destination.name}</h5>
+        `;
+        destinationContainer.appendChild(destinationCard);
+    });
+}
+
+// Render all destinations initially
+renderDestinations(destinations);
+function searchDestinations() {
+    const searchBox = document.getElementById('searchBox').value.toLowerCase();
+    const filteredDestinations = destinations.filter(destination => 
+        destination.name.toLowerCase().includes(searchBox)
+    );
+    renderDestinations(filteredDestinations);
+}
+
+function clearSearch() {
+    document.getElementById('searchBox').value = '';
+    renderDestinations(destinations);
+}
+
+
+function searchplace(){
+    
+}
+
+const colors = ['#f4f4f4', '#e3f2fd', '#ffe0b2', '#c8e6c9', '#fff9c4', ];
+        let currentColorIndex = 0;
+
+        setInterval(() => {
+            document.body.style.backgroundColor = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length; // Cycle through colors
+        }, 3000); // Change every 3 seconds
+
+    </script> 
+</body>
+</html>

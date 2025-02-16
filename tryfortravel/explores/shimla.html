@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listing</title>
+    <link rel="stylesheet" href="shimla.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    
+    <div class="container mt-4">
+        <!-- Search Container -->
+        <div class="row mb-4">
+            <div class="col-sm-12 col-md-6">
+                <div class="input-group">
+                    <input id="searchBox" class="form-control" type="text" placeholder="Search Destination" />
+                    <button class="btn btn-primary">Go</button>
+                    <button class="btn btn-danger">Clear</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event Listings -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 " id="eventList">
+            <!-- Event Card 1 -->
+            <div class="col event-card" data-category="biking">
+                <div class="card h-100">
+                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0a/f0/4f/7e.jpg" class="card-img-top" alt="Full Day private biking trip">
+                    <div class="card-body">
+                        <h5 class="card-title">Full-Day Private Biking Trip to Shimla Mountain with Lunch</h5>
+                        <div class="rating mb-2">
+                            <span>673 Reviews</span>
+                        </div>
+                        <p class="card-text"><strong>Duration:</strong> 3 hour(s)</p>
+                        <p class="card-text description">
+                            A fun and active tour. We discover Shimla, its main sights, markets, and culture through a bike tour. In the end, we visit the NGO Human Hope Foundation and interact with the children. Lunch is included, as well as some great snacks...
+                        </p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <span class="free-cancellation text-success">Free Cancellation</span>
+                        <a href="../inclusion/yashswi.html" class="btn btn-primary">BOOK NOW</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 2 -->
+            <div class="col event-card" data-category="shopping">
+                <div class="card h-100">
+                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/07/05/3f/6a.jpg" class="card-img-top" alt="Half Day shopping tour in shimla">
+                    <div class="card-body">
+                        <h5 class="card-title">Half Day Shopping Tour In Shimla</h5>
+                        <div class="rating mb-2">
+                            <span>673 Reviews</span>
+                        </div>
+                        <p class="card-text"><strong>Duration:</strong> 3 hour(s)</p>
+                        <p class="card-text description">
+                            Shimla, also known as the Queen of Hills, offers great scenic beauty and also some great bargains at its many local bazaars. On this half-day tour, explore the colorful bazaars of Shimla and pick up souvenirs and local wares. Your guide will tell you...
+                        </p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <span class="free-cancellation text-success">Free Cancellation</span>
+                        <a href="../inclusion/yashswi.html" class="btn btn-primary">BOOK NOW</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 3 -->
+            <div class="col event-card" data-category="romantic">
+                <div class="card h-100">
+                    <img src="https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/06/4c/2a.jpg" class="card-img-top" alt="Romantic Tour in shimla">
+                    <div class="card-body">
+                        <h5 class="card-title">Romantic Tour in Shimla</h5>
+                        <div class="rating mb-2">
+                            <span>673 Reviews</span>
+                        </div>
+                        <p class="card-text"><strong>Duration:</strong> 3 hour(s)</p>
+                        <p class="card-text description">
+                            An exclusive tour for all the romantics of the world! Together with the professional local guide, you will visit the most romantic places in the city. Romantic nature spots for sweethearts? There are plenty! Snow-covered mountains, breathtaking lakes...
+                        </p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <span class="free-cancellation text-success">Free Cancellation</span>
+                        <a href="../inclusion/yashswi.html" class="btn btn-primary">BOOK NOW</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 4 -->
+            <div class="col event-card" data-category="sightseeing">
+                <div class="card h-100">
+                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-480x320/0b/8d/03/13.jpg" class="card-img-top" alt="Private tour of Shimla city & kufri">
+                    <div class="card-body">
+                        <h5 class="card-title">Private Tour of Shimla City & Kufri</h5>
+                        <div class="rating mb-2">
+                            <span>673 Reviews</span>
+                        </div>
+                        <p class="card-text"><strong>Duration:</strong> 3 hour(s)</p>
+                        <p class="card-text description">
+                            This private sightseeing day tour of Shimla takes you to beautiful places within and outside Shimla. From Viceregal Lodge to picturesque Kufri and Jakhoo hills, where one can get amazing views of snow-covered Himalayas. Enjoy Himachali's traditional cuisine called Dham as per selected option.
+                        </p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <span class="free-cancellation text-success">Free Cancellation</span>
+                        <a href="../inclusion/yashswi.html" class="btn btn-primary">BOOK NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+        function searchDestinations() {
+            const searchValue = document.getElementById("searchBox").value.toLowerCase();
+            const eventCards = document.querySelectorAll(".event-card");
+
+            console.log("Search Value: ", searchValue); // Log the search input
+
+            eventCards.forEach(card => {
+                const title = card.querySelector(".card-title").textContent.toLowerCase();
+                console.log("Checking title:", title); // Log the title being checked
+
+                if (title.includes(searchValue) || searchValue === "") {
+                    card.style.display = "block"; // Show the card
+                } else {
+                    card.style.display = "none"; // Hide the card
+                }
+            });
+        }
+
+        function clearSearch() {
+            document.getElementById("searchBox").value = ""; // Clear the input box
+            const eventCards = document.querySelectorAll(".event-card");
+            eventCards.forEach(card => {
+                card.style.display = "block"; // Show all cards
+            });
+        }
+
+            // Attach your functions to the buttons
+            document.querySelector(".btn-primary").addEventListener("click", searchDestinations);
+            document.querySelector(".btn-danger").addEventListener("click", clearSearch);
+        });
+</script>
+
+</body>
+
+</html>
